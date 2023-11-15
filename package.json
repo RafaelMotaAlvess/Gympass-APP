@@ -1,0 +1,35 @@
+{
+  "name": "gympass-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelMotaAlvess/Gympass-APP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelMotaAlvess/Gympass-APP/issues"
+  },
+  "homepage": "https://github.com/RafaelMotaAlvess/Gympass-APP#readme",
+  "dependencies": {
+    "dotenv": "16.3.1",
+    "fastify": "4.24.3",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "2.1.0",
+    "@types/node": "20.9.0",
+    "eslint": "8.53.0",
+    "tsup": "7.2.0",
+    "tsx": "4.1.2",
+    "typescript": "5.2.2"
+  }
+}
