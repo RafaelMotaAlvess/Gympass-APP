@@ -22,4 +22,17 @@ describe("Authenticate service", () => {
 
     expect(user.id).toEqual(expect.any(String));
   });
+
+  it("should not be able to authenticate with wrong email", async () => {
+    const usersRepository = new InMemoryUsersRepository();
+    const sut = new AuthenticateService(usersRepository);
+
+    expect(
+      async () =>
+        await sut.execute({
+          email: "johndoe@example.com",
+          password: "123456",
+        }),
+    ).rejects.toBeInstanceOf(InvalidCredentialsError);
+  });
 });
