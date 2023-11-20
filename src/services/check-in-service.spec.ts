@@ -52,11 +52,13 @@ describe("Check In service", () => {
       gymId: "gym-id-test",
     });
 
-    expect(async () => {
-      await sut.execute({
-        userId: "user-id-test",
-        gymId: "gym-id-test",
-      });
-    }).rejects.toBeInstanceOf(Error);
+    vi.setSystemTime(new Date(2023, 0, 21, 8, 0, 0));
+
+    const { checkIn } = await sut.execute({
+      userId: "user-id-test",
+      gymId: "gym-id-test",
+    });
+
+    expect(checkIn.id).toEqual(expect.any(String));
   });
 });
