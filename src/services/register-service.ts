@@ -8,7 +8,7 @@ interface RegisterServiceRequest {
   password: string;
 }
 
-interface RegisteServiceResponse {
+interface RegisterServiceResponse {
   user: User;
 }
 
@@ -19,7 +19,7 @@ export class RegisterService {
     name,
     email,
     password,
-  }: RegisterServiceRequest): Promise<RegisteServiceResponse> {
+  }: RegisterServiceRequest): Promise<RegisterServiceResponse> {
     const password_hash = await hash(password, 6);
 
     const userWithSameEmail = await this.usersRepository.findByEmail(email);
