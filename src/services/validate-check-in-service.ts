@@ -4,7 +4,7 @@ import { ResourceNotFoundError } from "./errors/resource-not-found-error";
 import dayjs from "dayjs";
 import { LateCheckInValidationError } from "./errors/late-check-in-validation-error";
 interface ValidateCheckInServiceRequest {
-  checkInID: string;
+  checkInId: string;
 }
 
 interface ValidateCheckInServiceResponse {
@@ -15,9 +15,9 @@ export class ValidateCheckInService {
   constructor(private checkInsRepository: CheckInsRepository) {}
 
   async execute({
-    checkInID,
+    checkInId,
   }: ValidateCheckInServiceRequest): Promise<ValidateCheckInServiceResponse> {
-    const checkIn = await this.checkInsRepository.findByID(checkInID);
+    const checkIn = await this.checkInsRepository.findByID(checkInId);
 
     if (!checkIn) {
       throw new ResourceNotFoundError();
