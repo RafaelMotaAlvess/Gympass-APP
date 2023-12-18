@@ -26,7 +26,7 @@ describe("Validate Check In service", () => {
     });
 
     const { checkIn } = await sut.execute({
-      checkInID: createdcheckIn.id,
+      checkInId: createdcheckIn.id,
     });
 
     expect(checkIn.validated_at).toEqual(expect.any(Date));
@@ -36,7 +36,7 @@ describe("Validate Check In service", () => {
   it("should not be able to validade an inexistent check-in", async () => {
     expect(async () => {
       await sut.execute({
-        checkInID: "inexistent-check-in=id",
+        checkInId: "inexistent-check-in=id",
       });
     }).rejects.toBeInstanceOf(ResourceNotFoundError);
   });
@@ -55,7 +55,7 @@ describe("Validate Check In service", () => {
 
     expect(async () => {
       await sut.execute({
-        checkInID: createdcheckIn.id,
+        checkInId: createdcheckIn.id,
       });
     }).rejects.toBeInstanceOf(LateCheckInValidationError);
   });
