@@ -27,7 +27,6 @@ export async function authenticate(
       {
         sign: {
           sub: user.id,
-          expiresIn: "7d",
         },
       },
     );
@@ -37,6 +36,7 @@ export async function authenticate(
       {
         sign: {
           sub: user.id,
+          expiresIn: "7d",
         },
       },
     );
