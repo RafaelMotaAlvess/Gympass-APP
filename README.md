@@ -3,7 +3,7 @@
 
 [![wakatime](https://wakatime.com/badge/user/0cca606b-99f7-4d43-8228-7f249bc17f26/project/018bd02e-2ae8-4935-8e61-abc93a2c8ad7.svg)](https://wakatime.com/badge/user/0cca606b-99f7-4d43-8228-7f249bc17f26/project/018bd02e-2ae8-4935-8e61-abc93a2c8ad7)
 
-> **Gympass-APP** é um APP para gerenciamento de academias, usuarios e check-ins.
+> **Gympass-APP** é um API para gerenciamento de academias, usuarios e check-ins.
 
 ## 🔎 Sobre
 
