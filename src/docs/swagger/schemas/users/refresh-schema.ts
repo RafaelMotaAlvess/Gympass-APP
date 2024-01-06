@@ -1,7 +1,7 @@
 export const refreshSchema = {
   schema: {
     description: 'Refresh a user token',
-    tags: ['user'],
+    tags: ['user routes'],
     summary: 'Refresh a user token',
     response: {
       200: {

@@ -1,7 +1,7 @@
 export const registerSchema = {
   schema: {
     description: 'Register a new user in database',
-    tags: ['user'],
+    tags: ['user routes'],
     summary: 'Register a new user ',
     
     body: {

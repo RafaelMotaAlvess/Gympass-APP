@@ -1,7 +1,7 @@
 export const authenticateSchema = {
   schema: {
     description: 'Authenticate a user with refreshToken',
-    tags: ['user'],
+    tags: ['user routes'],
     summary: 'Authenticate a user ',
     body: {
       type: 'object',

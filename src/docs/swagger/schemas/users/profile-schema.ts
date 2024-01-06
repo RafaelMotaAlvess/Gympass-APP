@@ -1,7 +1,7 @@
 export const profileSchema = {
   schema: {
     description: 'Get a existing user profile',
-    tags: ['user'],
+    tags: ['user routes'],
     summary: 'Get a user profile',
     response: {
       200: {
