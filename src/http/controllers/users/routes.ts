@@ -5,9 +5,10 @@ import { authenticate } from "./authenticate-controller";
 import { profile } from "./profile-controller";
 import { verifyJWT } from "../../middlewares/verify-jwt";
 import { refresh } from "./refresh-controller";
+import { registerSchema } from "@/docs/swagger/schemas";
 
 export async function usersRoutes(app: FastifyInstance) {
-  app.post("/users", register);
+  app.post("/users", registerSchema,register);
   app.post("/sessions", authenticate);
 
   app.patch("/token/refresh", refresh);
