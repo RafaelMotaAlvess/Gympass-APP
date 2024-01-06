@@ -14,6 +14,7 @@ Gympass-APP é um aplicativo dedicado ao gerenciamento de academias, usuários e
 ## 🔧 Tecnologias
 
 - <a target="_blank" href="https://www.prisma.io">Prisma</a>
+- <a target="_blank" href="https://www.docker.com">Docker</a>
 - <a target="_blank" href="https://fastify.dev">Fastify</a>
 - <a target="_blank" href="https://www.typescriptlang.org">TypeScript</a>
 - <a target="_blank" href="https://vitest.dev">Vitest</a>
