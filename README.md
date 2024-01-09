@@ -57,12 +57,7 @@ Mude o nome do seu `.env.example` para `.env` e adicione as informações necess
   NODE_ENV=dev
   JWT_SECRET="CHAVE PARA O JWT"
   DATABASE_URL="URL DO POSTGRES"
-``` 
 ```
-  Exemplo de URL: 
-  "postgresql://<username>:<password>@localhost:5432/<database_name>?schema=public"
-```
-Informações da URL estao no `docker-compose.yml` na parte de `enviroment` podendo ser alterada
 
 #### Execute o contêiner
 
