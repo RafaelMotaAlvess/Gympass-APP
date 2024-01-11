@@ -5,7 +5,7 @@ import { create } from "./create-controller";
 import { validate } from "./validate-controller";
 import { history } from "./history-controller";
 import { metrics } from "./metrics-controller";
-import { checkInsMetricsSchema, createCheckInSchema, searchCheckinsHistory } from "@/docs/swagger/schemas";
+import { checkInsMetricsSchema, createCheckInSchema, searchCheckinsHistory, validateCheckInSchema } from "@/docs/swagger/schemas";
 
 export async function checkInsRoutes(app: FastifyInstance) {
   app.addHook("onRequest", verifyJWT);
@@ -14,9 +14,10 @@ export async function checkInsRoutes(app: FastifyInstance) {
   app.get("/check-ins/metrics",  checkInsMetricsSchema, metrics);
 
   app.post("/gyms/:gymId/check-ins", createCheckInSchema, create);
+
   app.patch(
     "/check-ins/:checkInId/validate",
-    { onRequest: [verifyUserRole("ADMIN")]  },
+    { onRequest: [verifyUserRole("ADMIN")], ...validateCheckInSchema  },
     validate,
   );
 }
