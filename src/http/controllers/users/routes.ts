@@ -10,9 +10,9 @@ import { authenticateSchema, registerSchema, refreshSchema, profileSchema } from
 
 export async function usersRoutes(app: FastifyInstance) {
   app.post("/users", registerSchema, register);
-  app.post("/sessions", authenticateSchema ,authenticate);
+  app.post("/sessions", authenticateSchema, authenticate);
 
-  app.patch("/token/refresh", refreshSchema ,refresh);
+  app.patch("/token/refresh", refreshSchema, refresh);
 
   /** Authenticated */
   app.get("/me", { onRequest: [verifyJWT], ...profileSchema}, profile);
