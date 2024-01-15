@@ -3,13 +3,6 @@ export const validateCheckInSchema = {
     description: 'Validate a check-in',
     tags: ['checkins routes'],
     summary: 'Validate a check-in',
-    body: {
-      type: 'object',
-      properties: {
-        checkInId: { type: 'string' },
-      },
-      required: ['checkInId']
-    },
 
     response: {
       204: {

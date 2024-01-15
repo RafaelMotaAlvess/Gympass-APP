@@ -14,8 +14,8 @@ export const searchCheckinsHistory = {
               type: 'object',
               properties: {
                 id: { type: 'string', example: "uuid" },
-                gymId: { type: 'string', example: "uuid" },
-                userId: { type: 'string', example: "uuid" },
+                gym_id: { type: 'string', example: "uuid" },
+                user_id: { type: 'string', example: "uuid" },
                 createdAt: { type: 'string', example: "date" },
                 validatedAt: { type: 'string', example: "date" },
               }

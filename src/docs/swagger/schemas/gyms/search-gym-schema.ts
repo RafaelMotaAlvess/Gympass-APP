@@ -14,7 +14,7 @@ export const searchGymSchema = {
               type: 'object',
               properties: {
                 id: {type: 'string'},
-                name: {type: 'string'},
+                title: {type: 'string'},
                 latitude: {type: 'number'},
                 longitude: {type: 'number'},
                 created_at: {type: 'string', format: 'date-time'},
