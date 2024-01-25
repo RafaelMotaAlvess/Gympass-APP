@@ -53,12 +53,6 @@ Gympass-APP é um aplicativo dedicado ao gerenciamento de academias, usuários e
 
 Mude o nome do seu `.env.example` para `.env` e adicione as informações necessárias para cada variavel.
 
-```bash
-  NODE_ENV=dev
-  JWT_SECRET="CHAVE PARA O JWT"
-  DATABASE_URL="URL DO POSTGRES"
-```
-
 #### Execute o contêiner
 
 ```bash
